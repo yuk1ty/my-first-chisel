@@ -27,7 +27,7 @@ class Memory extends Module {
 
   val mem = Mem(16384, UInt(8.W))
 
-  loadMemoryFromFile(mem, "src/hex/sw.hex")
+  loadMemoryFromFile(mem, "src/hex/ctest.hex")
 
   io.imem.inst := Cat(
     mem(io.imem.addr + 3.U(WORD_LEN.W)),
